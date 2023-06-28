@@ -17,6 +17,8 @@
 		"@iconify-json/carbon": "^1.1.16",
 		"@iconify-json/eos-icons": "^1.1.6",
 		"@tailwindcss/typography": "^0.5.9",
+		"@sveltejs/adapter-node": "^1.2.4",
+		"@sveltejs/kit": "^1.15.10",
 		"@types/jsdom": "^21.1.1",
 		"@types/marked": "^4.0.8",
 		"@types/parquetjs": "^0.10.3",
@@ -38,8 +40,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/adapter-node": "^1.2.4",
-		"@sveltejs/kit": "^1.15.10",
 		"@huggingface/hub": "^0.5.1",
 		"@huggingface/inference": "^2.2.0",
 		"autoprefixer": "^10.4.14",
