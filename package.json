@@ -40,6 +40,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-node": "next",
+    		"@sveltejs/kit": "next",
 		"@huggingface/hub": "^0.5.1",
 		"@huggingface/inference": "^2.2.0",
 		"autoprefixer": "^10.4.14",
