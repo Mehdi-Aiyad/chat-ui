@@ -1,4 +1,4 @@
-import adapter from "@sveltejs/adapter-node";
+import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/kit/vite";
 import dotenv from "dotenv";
 
@@ -23,6 +23,9 @@ const config = {
 			// handled in hooks.server.ts, because we can have multiple valid origins
 			checkOrigin: false,
 		},
+		 prerender: {
+		        default: true
+		}
 	},
 };
 
