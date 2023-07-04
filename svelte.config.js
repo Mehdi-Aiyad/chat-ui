@@ -14,15 +14,22 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter({"strict":false}),
-
+		adapter: adapter({
+			// default options are shown. On some platforms
+			// these options are set automatically — see below
+			pages: "build",
+			assets: "build",
+			fallback: "index.html",
+			precompress: false,
+			strict: true,
+		}),
 		paths: {
 			base: process.env.APP_BASE || "",
 		},
 		csrf: {
 			// handled in hooks.server.ts, because we can have multiple valid origins
 			checkOrigin: false,
-		}
+		},
 	},
 };
 
