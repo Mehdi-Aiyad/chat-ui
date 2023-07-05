@@ -1,4 +1,4 @@
-import adapter from "@sveltejs/adapter-static";
+import adapter from "@sveltejs/adapter-node";
 import { vitePreprocess } from "@sveltejs/kit/vite";
 import dotenv from "dotenv";
 
@@ -14,7 +14,7 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter({"strict":false}),
+		adapter: adapter(),
 
 		paths: {
 			base: process.env.APP_BASE || "",
@@ -22,7 +22,7 @@ const config = {
 		csrf: {
 			// handled in hooks.server.ts, because we can have multiple valid origins
 			checkOrigin: false,
-		}
+		},
 	},
 };
 
